@@ -1,5 +1,12 @@
 
 <?php
+$visitor=390;
+$like=20;
+$dislike=10;
+$visitHistory=array(array("Yesterday 3pm","Homepage","good","Chrome"),
+                    array("Yesterday 5pm","Post 1","good","ipad"),
+                    array("Today 7am","post 2"," ","Firefox")
+);
 echo'
 <!DOCTYPE html>
 <html lang="en">
@@ -32,15 +39,15 @@ echo'
     <div>
         <div style="border: 1px solid black; width: 150px; display: inline-block; text-align: center;margin: 20px;">
             <i class="fa fa-users" style="margin-top: 12px; color:cornflowerblue;"></i><br>
-            <p>390 Visitors</p>
+            <p>'.$visitor.'</p>
         </div>
         <div style="border: 1px solid black; width: 150px;display: inline-block; text-align: center;margin: 20px;">
                 <i class="fa fa-thumbs-up"  style="margin-top: 12px;color:cornflowerblue;"></i><br>
-                <p>28 likes</p>
+                <p>'.$like.'</p>
         </div>
         <div style="border: 1px solid black; width: 150px;display: inline-block;  text-align: center;margin: 20px;">
             <i class="fa fa-thumbs-down"  style="margin-top: 12px;color:cornflowerblue;"></i><br>
-            <p>12 dislikes</p>
+            <p>'.$dislike.'</p>
         </div>
     </div>
     <div style="margin-left:20px; margin-bottom: 20px;">
@@ -53,22 +60,22 @@ echo'
                 <td>Visiting device</td>
             </tr>
             <tr>
-                <td>Yesterday 3pm</td>
-                <td>Homepage</td>
-                <td>good</td>
-                <td>Chrome</td>
+                <td>'.$visitHistory[0][0].'</td>
+                <td>'.$visitHistory[0][1].'</td>
+                <td>'.$visitHistory[0][2].'</td>
+                <td>'.$visitHistory[0][3].'</td>
             </tr>
             <tr>
-                <td>Yesterday 5pm</td>
-                <td>Post 1</td>
-                <td>good</td>
-                <td>iPad</td>
+                <td>'.$visitHistory[1][0].'</td>
+                <td>'.$visitHistory[1][1].'</td>
+                <td>'.$visitHistory[1][2].'</td>
+                <td>'.$visitHistory[1][3].'</td>
             </tr>
             <tr>
-                <td>Today 7am</td>
-                <td>Post 2</td>
-                <td></td>
-                <td>Firefox</td>
+                <td>'.$visitHistory[2][0].'</td>
+                <td>'.$visitHistory[2][1].'</td>
+                <td>'.$visitHistory[2][2].'</td>
+                <td>'.$visitHistory[2][3].'</td>
             </tr>
         </table>
     </div>
