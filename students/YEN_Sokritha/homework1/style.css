@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #d8d8d8;
+  color: #000;
+  font-family: "Quicksand", "Arial", "sans-serif";
+  font-size: 16px;
+  font-weight: 300;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 20px 0 10px;
+}
+
+/* ------------------------
+*** Box-Homepage ***
+---------------------------- */
+
+.homepage-box {
+  background-color: #fff;
+  border: 2px solid;
+  width: 95%;
+  height: 90vh;
+  margin-top: 2.5%;
+  margin-left: 2.5%;
+  padding: 25px 50px;
+}
+
+/* ------------------------
+*** NavBar ***
+---------------------------- */
+
+.navbar {
+  float: left;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar li:nth-child(2) {
+  border-left: 2px solid;
+  padding-left: 5px;
+}
+
+.navbar li a {
+  color: #68b8d5;
+  font-size: 1.2rem;
+  margin-left: 5px;
+  text-decoration: none;
+  border-bottom: 2px solid #68b8d5;
+  padding: 2px 0;
+}
+
+.navbar li a:hover {
+  color: #297895;
+}
+
+/* ------------------------
+*** Title impression ***
+---------------------------- */
+
+.impression-title,
+.post-title {
+  display: inline-block;
+}
+
+/* ------------------------
+*** Form ***
+---------------------------- */
+
+form {
+  float: right;
+  margin-top: 6px;
+  margin-right: 10px;
+}
+
+/* ------------------------
+*** Impression Feature ***
+---------------------------- */
+
+.impression-row {
+  padding: 15px 20%;
+}
+
+.col-box {
+  border: 2px solid;
+  text-align: center;
+  padding: 30px 0 10px;
+  width: 25%;
+  margin-left: 8%;
+}
+
+.big-icon {
+  display: block;
+  font-size: 2em;
+  color: #68b8d5;
+  text-align: center;
+}
+
+.big-icon:hover {
+  color: #297895;
+}
+
+/* ------------------------
+*** Table ***
+---------------------------- */
+table {
+  border: 2px solid;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+td,
+th {
+  border-right: 2px solid #000;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #c7c7c7;
+}
+
+tr:nth-child(even) {
+  background-color: #ededed;
+}
+
+/* ------------------------
+*** My Post ***
+---------------------------- */
+.large-box {
+  height: auto;
+  margin-bottom: 40px;
+}
+
+img {
+  width: 140px;
+  height: 140px;
+}
+
+p {
+  margin-bottom: 10px;
+  font-size: 1em;
+  text-align: justify;
+}
+
+button {
+  float: right;
+  color: #fff;
+  margin-top: 20px;
+  border: none;
+  background-color: #297895;
+  box-shadow: 1px 2px #888888;
+  padding: 5px 10px;
+}
+
+button:hover {
+  background-color: #68b8d5;
+}
+
+.box {
+  width: 100%;
+  padding: 0 20%;
+}
+
+.post-title {
+  text-decoration: underline;
+}
+
+.post-heading {
+  margin-top: 0;
+}
+
+.profile-img {
+  float: left;
+}
+
+.description-img {
+  float: left;
+  margin-left: 40px;
+  width: 70%;
+}
+
+.time-posted {
+  float: right;
+  font-weight: 400;
+}
