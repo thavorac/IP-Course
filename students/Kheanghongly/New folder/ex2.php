@@ -33,20 +33,20 @@ echo"
     </p><br>
     <div class='overflow'>
         <img src='maxresdefault.jpg' alt=''>My name is JongKook <br> Nature, in the broadest sense, is the natural, physical, or material world or universe. Nature can refer to the phenomena of the physical world, and also to life in general. The study of nature is a large, if not the only, part of science. Although humans are part of nature, human activity is often understood as a separate category from other natural phenomena.
-        <br><br><span style='float: right;'>Saved 3hour ago</span>
+        <br><span style='float: right;'>Saved 3hour ago</span>
     </div><br>
     <div class='overflow'>
         <img src='unnamed.jpg' alt=''>My name is V <br> Nature, in the broadest sense, is the natural, physical, or material world or universe. Nature can refer to the phenomena of the physical world, and also to life in general. The study of nature is a large, if not the only, part of science. Although humans are part of nature, human activity is often understood as a separate category from other natural phenomena.
-        <br><br><span style='float: right;'>Saved 1hour ago</span>
+        <br><span style='float: right;'>Saved 1hour ago</span>
     </div><br>
     <h2><a href=''>Public Posts</a></h2><br>
     <div class='overflow'>
         <img src='mqdefault.jpg' alt=''>My name is Krern <br> Nature, in the broadest sense, is the natural, physical, or material world or universe. Nature can refer to the phenomena of the physical world, and also to life in general. The study of nature is a large, if not the only, part of science. Although humans are part of nature, human activity is often understood as a separate category from other natural phenomena.
-        <br><br><span style='float: right;'>Public 3hour ago</span>
+        <br><span style='float: right;'>Public 3hour ago</span>
     </div><br>
     <div class='overflow'>
         <img src='download.jfif' alt=''>My name is Pekmi <br> Nature, in the broadest sense, is the natural, physical, or material world or universe. Nature can refer to the phenomena of the physical world, and also to life in general. The study of nature is a large, if not the only, part of science. Although humans are part of nature, human activity is often understood as a separate category from other natural phenomena.
-        <br><br><span style='float: right;'>Public 1hour ago</span>
+        <br><span style='float: right;'>Public 1hour ago</span>
     </div>
 </body>
 </html>
