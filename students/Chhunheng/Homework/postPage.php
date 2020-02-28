@@ -33,6 +33,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     
 <style>
+    a{
+        font-size:20px;
+    }
     #Month{
         
         float: right;
@@ -83,7 +86,7 @@ a:visited {
 </head>
 <body>
     
-    <a href="index1.php">Home</a>| <a href="index2.php">My Posts</a>
+<a href="homePage.php">Home</a>| <a href="postPage.php">My Posts</a><br><br><br>
 
     <h1>Welcome to my blog!</h1>
     <div class="impress">

@@ -15,6 +15,9 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
    <style>
+   a{
+       font-size:20px;
+   }
        body{
         margin-left: 5%;
         margin-right: 5%;
@@ -70,7 +73,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="index1.php">Home</a>| <a href="php">My Posts</a><br><br><br>
+    <a href="homePage.php">Home</a>| <a href="postPage.php">My Posts</a><br><br><br>
    <br><br>
     <div class="post">
     
