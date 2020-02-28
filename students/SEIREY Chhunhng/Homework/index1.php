@@ -70,7 +70,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="index1.html">Home</a>| <a href="index2.html">My Posts</a><br><br><br>
+    <a href="index1.php">Home</a>| <a href="php">My Posts</a><br><br><br>
    <br><br>
     <div class="post">
     

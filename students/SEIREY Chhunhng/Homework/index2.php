@@ -82,7 +82,7 @@ a:visited {
 </head>
 <body>
     
-    <a href="index1.html">Home</a>| <a href="index2.html">My Posts</a>
+    <a href="index1.php">Home</a>| <a href="index2.php">My Posts</a>
 
     <h1>Welcome to my blog!</h1>
     <div class="impress">
