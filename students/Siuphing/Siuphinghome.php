@@ -3,10 +3,10 @@
   $visitor = 200;
   $like = 20;
   $dislike = 10;
-  $visitorHistory = array(
+  $visitorHistories = array(
                           array("Time" => "Yesterday 3pm", "VisitingPage" => "Homepage", "Impression" => "good", "VisitingDevice"=> "Chrome"),
                           array("Time" => "Yesterday 5pm", "VisitingPage" => "Post 1", "Impression" => "good", "VisitingDevice"=> "iPad"),
-                          array("Time" => "Today 7am", "VisitingPage" => "Post 2", "Impression" => " ", "VisitingDevice"=> "Firefox"),
+                          array("Time" => "Today 7am", "VisitingPage" => "Post 2", "Impression" =>"", "VisitingDevice"=> "Firefox"),
                         );
 echo "
   <!DOCTYPE html>
@@ -71,25 +71,17 @@ echo "
 				<th style='border-left: 3px solid black; padding-bottom: 10px; background-color: darkgrey'>Visiting page</th>
 				<th style='border-left: 3px solid black; padding-bottom: 10px; background-color: darkgrey'>Impression</th>
 				<th style='border-left: 3px solid black; padding-bottom: 10px; background-color: darkgrey'>Visiting device</th>
-			</tr>
-			<tr>
-				<td style='padding-bottom: 10px; background-color: lightgrey'>$visitorHistory[0][Time]</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>$visitorHistory[0][VisitingPage]</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>$visitorHistory[0][Impression]</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>$visitorHistory[0][VisitingDevice]</td>
-			</tr>
-			<tr>
-				<td style='padding-bottom: 10px'>$visitorHistory[1][Time]</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px'>$visitorHistory[1][VisitingPage]</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px'>$visitorHistory[1][Impression]</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px'>$visitorHistory[1][VisitingDevice]</td>
-			</tr>
-			<tr>
-				<td style='padding-bottom: 10px; background-color: lightgrey'>$visitorHistory[2][Time]</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>$visitorHistory[2][VisitingPage]</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'></td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>$visitorHistory[2][Firefox]</td>
-			</tr>
+			</tr>";
+
+      foreach ($visitorHistories as $visitorHistory) {
+        echo "<tr>
+          <td style='padding-bottom: 10px; background-color: lightgrey'>".$visitorHistory['Time']."</td>
+          <td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>".$visitorHistory['VisitingPage']."</td>
+          <td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>".$visitorHistory['Impression']."</td>
+          <td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>".$visitorHistory['VisitingDevice']."</td>
+        </tr>";
+      }
+      echo "
 		</table>
 	</div>
 </body>
