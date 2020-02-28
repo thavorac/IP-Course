@@ -2,20 +2,20 @@
     $visitor= 100;
     $like= 20;
     $dislike= 10;
-    $visitorHistory = array(
-        "row1" => array(
+    $visitorHistories = array(
+        array(
             'time'=> "Yesterday 3pm", 
             'visiting_page' => "Home page",
             'impression' => "Good", 
             'visiting_device' => 'Chrome'
         ),
-        "row2" => array(
+        array(
             'time'=> "Yesterday 5pm", 
             'visiting_page' => "Post 1", 
             'impression' =>"Good", 
             'visiting_device' => "iPad"
         ),
-        "row3" => array(
+        array(
             "time"=> "Today 7am", 
             "visiting_page" => "Post 2", 
             "impression" => null,
@@ -115,27 +115,15 @@
             </tr>
             <tr>
         ";
-                echo "<td>".$visitorHistory['row1']['time']."</td>";
-                echo "<td>".$visitorHistory['row1']['visiting_page']."</td>";
-                echo "<td>".$visitorHistory['row1']['impression']."</td>";
-                echo "<td>".$visitorHistory['row1']['visiting_device']."</td>";
-                
-        echo"
-            </tr>
+        foreach($visitorHistories as $visitorHistory){
+            echo "
             <tr>
-            ";
-            echo "<td>".$visitorHistory['row2']['time']."</td>";
-            echo "<td>".$visitorHistory['row2']['visiting_page']."</td>";
-            echo "<td>".$visitorHistory['row2']['impression']."</td>";
-            echo "<td>".$visitorHistory['row2']['visiting_device']."</td>";
-        echo"
-            </tr>
-            <tr>
-            ";
-            echo "<td>".$visitorHistory['row3']['time']."</td>";
-            echo "<td>".$visitorHistory['row3']['visiting_page']."</td>";
-            echo "<td>".$visitorHistory['row3']['impression']."</td>";
-            echo "<td>".$visitorHistory['row3']['visiting_device']."</td>";
+                <td>".$visitorHistory['time']."</td>
+                <td>".$visitorHistory['visiting_page']."</td>
+                <td>".$visitorHistory['impression']."</td>
+                <td>".$visitorHistory['visiting_device']."</td>
+            </tr>    
+            ";}
         echo"
             </tr>
         </table>

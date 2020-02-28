@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>My Posts</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -28,35 +28,23 @@
             <td><a href="./posts.php">My Posts</a></td>
         </tr>
     </table>
-    
-    <h2>Welcome to my blog!</h2>
-    
+
     <table class="w-100">
         <tr>
-            <td><h4>Total impressions</h4></td>
+            <td><h4>Drafting Posts</h4></td>
             <td class="select-month">
-                <select name="" id="">
-                    <option value="">This month</option>
-                </select>
+                <a href="">Create New Post</a>
             </td>
         </tr>
     </table>
 
     <table class="stats w-100">
         <tr>
-            <td>
-                <i class="material-icons" style="font-size: 50px">supervisor_account</i><br>
-                <?php echo $visitor; ?> Visitors
+            <td style="width: 30%">
+                <i class="material-icons" style="font-size: 50px">supervisor_account</i>
             </td>
-            <td class="no-border"></td>
             <td>
-                <i class="material-icons" style="font-size: 50px">thumb_up</i><br>
-                <?php echo $like; ?> Likes
-            </td>
-            <td class="no-border"></td>
-            <td>
-                <i class="material-icons" style="font-size: 50px">thumb_down</i><br>
-                <?php echo $dislike; ?> Dislikes
+                <h3>Title</h3>
             </td>
         </tr>
     </table>
