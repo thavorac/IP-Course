@@ -1,5 +1,15 @@
 <?php
-  echo "<!DOCTYPE html>
+
+  $visitor = 200;
+  $like = 20;
+  $dislike = 10;
+  $visitorHistory = array(
+                          array("Time" => "Yesterday 3pm", "VisitingPage" => "Homepage", "Impression" => "good", "VisitingDevice"=> "Chrome"),
+                          array("Time" => "Yesterday 5pm", "VisitingPage" => "Post 1", "Impression" => "good", "VisitingDevice"=> "iPad"),
+                          array("Time" => "Today 7am", "VisitingPage" => "Post 2", "Impression" => " ", "VisitingDevice"=> "Firefox"),
+                        );
+echo "
+  <!DOCTYPE html>
 <html>
 <head>
 	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -33,17 +43,17 @@
 			<tr>
 				<td style='border: 3px solid black; text-align: center; width: 20%; height: 150px'>
 					<i style='font-size: 50px' class='fas'>&#xf0c0;</i>
-					<br><br>390 Visitors
+					<br><br>$visitor Visitors
 				</td>
 				<td colspan='1' style='width: 5%'></td>
 				<td style='border: 3px solid black; text-align: center; width: 20%; height: 150px'>
 					<i style='font-size: 50px' class='fas'>&#xf164;</i>
-					<br><br>28 Likes
+					<br><br>$like Likes
 				</td>
 				<td colspan='1' style='width: 5%'></td>
 				<td style='border: 3px solid black; text-align: center; width: 20%; height: 150px'>
 					<i style='font-size: 50px' class='fas'>&#xf165;</i>
-					<br><br>12 Dislikes
+					<br><br>$dislike Dislikes
 				</td>
 			</tr>
 			<tr>
@@ -63,22 +73,22 @@
 				<th style='border-left: 3px solid black; padding-bottom: 10px; background-color: darkgrey'>Visiting device</th>
 			</tr>
 			<tr>
-				<td style='padding-bottom: 10px; background-color: lightgrey'>Yesterday 3pm</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>Homepage</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>good</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>Chrome</td>
+				<td style='padding-bottom: 10px; background-color: lightgrey'>$visitorHistory[0][Time]</td>
+				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>$visitorHistory[0][VisitingPage]</td>
+				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>$visitorHistory[0][Impression]</td>
+				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>$visitorHistory[0][VisitingDevice]</td>
 			</tr>
 			<tr>
-				<td style='padding-bottom: 10px'>Yesterday 5pm</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px'>Post 1</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px'>good</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px'>iPad</td>
+				<td style='padding-bottom: 10px'>$visitorHistory[1][Time]</td>
+				<td style='border-left: 3px solid black; padding-bottom: 10px'>$visitorHistory[1][VisitingPage]</td>
+				<td style='border-left: 3px solid black; padding-bottom: 10px'>$visitorHistory[1][Impression]</td>
+				<td style='border-left: 3px solid black; padding-bottom: 10px'>$visitorHistory[1][VisitingDevice]</td>
 			</tr>
 			<tr>
-				<td style='padding-bottom: 10px; background-color: lightgrey'>Today 7am</td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>Post 2</td>
+				<td style='padding-bottom: 10px; background-color: lightgrey'>$visitorHistory[2][Time]</td>
+				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>$visitorHistory[2][VisitingPage]</td>
 				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'></td>
-				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>Firefox</td>
+				<td style='border-left: 3px solid black; padding-bottom: 10px; background-color: lightgrey'>$visitorHistory[2][Firefox]</td>
 			</tr>
 		</table>
 	</div>
