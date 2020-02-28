@@ -1,5 +1,13 @@
 <?php
-echo"
+$visitor=90;
+$like=70;
+$dislike=10;
+$visitorHistoies = array(
+    array ("time" => "Yesterday 3am", "visiting page" => "Home page", "impression" => "Good", "visiting device"=>"Chrome"),
+    array ("time" => "Yesterday 5am", "visiting page" => "Post1", "impression" => "Good", "visiting device"=>"ipad"),
+    array ("time" => "Today", "visiting page" => "Post2", "impression" => "", "visiting device"=>"firefox"),
+)
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +26,7 @@ echo"
             margin:44px;
         }
         .table1{
+            border: 2px solid black;
             border-collapse: collapse;
             text-align: left;
             width: 100%;
@@ -38,6 +47,10 @@ echo"
         .tr1{
             height: 50px;
         }
+        img{
+            width: 30px;
+            height: 30px;
+        }
     </style>
 </head>
 <body style='border: 1px solid black; width: 50%; padding: 20px;'>
@@ -52,42 +65,37 @@ echo"
             <option value=''>Last year</option>
         </select>
     </span>
-    
+    <?php
+    echo"
     <div><ul>
-        <li><div><img src='c.png' alt= '' style='width: 30px; height: 30px;'><br>390 Visitors</div></li>
-        <li><div><img src='b.png' alt='' style='width: 30px; height: 30px;'><br>28 Likes</div></li>
-        <li><div><img src='a.png' alt='' style='width: 30px; height: 30px;'><br>12 Dislikes</div></li>
+        <li><div style='padding:5px;'><img src='c.png' alt= ''><br>$visitor</div></li>
+        <li><div style='padding:5px;'><img src='b.png' alt=''><br>$like</div></li>
+        <li><div style='padding:5px;'><img src='a.png' alt=''><br>$dislike</div></li>
         </ul>
     </div>
+    "
+    ?>
     <h2>Visitor's history</h2>
+
     <table class='table1'>
-        <tr style='border-top: 2px solid black; background-color: darkgrey;'>
+        <tr>
             <th>Time</th>
             <th>Visiting page</th>
             <th>Impression</th>
             <th>Visiting device</th>
-        </tr>
-        <tr class='tr1' >
-            <td>Homepage</td>
-            <td>Yesterday 3pm</td>
-            <td>good</td>
-            <td>Chrome</td>
-        </tr>
-        <tr class='tr1'>
-            <td>Yeserday 5pm</td>
-            <td>Post1</td>
-            <td>good</td>
-            <td>ipad</td>
-        </tr>
-        <tr style=' border-bottom: 2px solid black;' class='tr1'>
-            <td>Today 7am</td>
-            <td>Post2</td>
-            <td></td>
-            <td>Firefox</td>
-        </tr>
+    </tr>
+    <?php
+
+    foreach($visitorHistoies as $visitorHistory)
+    echo"
+    <tr>
+    <td>".$visitorHistory['time']."</td>
+    <td>".$visitorHistory['visiting page']."</td>
+    <td>".$visitorHistory['impression']."</td>
+    <td>".$visitorHistory['visiting device']."</td>
+    </tr>
+    "
+    ?>
     </table>
 </body>
 </html>
-"
-
-?>

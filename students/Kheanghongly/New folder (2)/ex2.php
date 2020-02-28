@@ -25,7 +25,7 @@ echo"
         }
     </style>
 </head>
-<body style='width: 50%; border: 1px solid black; padding: 20px;'>
+<body style='width: 50%; border: 1px solid black; padding: 20px;' >
     <a href='ex1.php'>Home</a>    |    <a href='ex2.php'>My Posts</a><br><br>
     <p>
         <h2 style='display: inline;'><a href=''>Drafting Post</a></h2>
