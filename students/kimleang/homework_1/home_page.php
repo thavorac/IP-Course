@@ -3,11 +3,11 @@
 $visitor=390;
 $like=20;
 $dislike=10;
-$visitHistory=array(array("Yesterday 3pm","Homepage","good","Chrome"),
-                    array("Yesterday 5pm","Post 1","good","ipad"),
-                    array("Today 7am","post 2"," ","Firefox")
+$visitHistory=array(array("time"=>"Yesterday 3pm","visit"=>"Homepage","impression"=>"good","device"=>"Chrome"),
+                    array("time"=>"Yesterday 5pm","visit"=>"Post 1","impression"=>"good","device"=>"ipad"),
+                    array("time"=>"Today 7am","visit"=>"post 2","impression"=>" ","device"=>"Firefox")
 );
-echo'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,15 +39,15 @@ echo'
     <div>
         <div style="border: 1px solid black; width: 150px; display: inline-block; text-align: center;margin: 20px;">
             <i class="fa fa-users" style="margin-top: 12px; color:cornflowerblue;"></i><br>
-            <p>'.$visitor.' visited</p>
+            <p><?php echo"'.$visitor.' visited"?></p>
         </div>
         <div style="border: 1px solid black; width: 150px;display: inline-block; text-align: center;margin: 20px;">
                 <i class="fa fa-thumbs-up"  style="margin-top: 12px;color:cornflowerblue;"></i><br>
-                <p>'.$like.' liked</p>
+                <p><?php echo"'.$like.' liked"?></p>
         </div>
         <div style="border: 1px solid black; width: 150px;display: inline-block;  text-align: center;margin: 20px;">
             <i class="fa fa-thumbs-down"  style="margin-top: 12px;color:cornflowerblue;"></i><br>
-            <p>'.$dislike.' disliked</p>
+            <p><?php echo"'.$dislike.' disliked"?></p>
         </div>
     </div>
     <div style="margin-left:20px; margin-bottom: 20px;">
@@ -59,27 +59,18 @@ echo'
                 <td>Impression</td>
                 <td>Visiting device</td>
             </tr>
-            <tr>
-                <td>'.$visitHistory[0][0].'</td>
-                <td>'.$visitHistory[0][1].'</td>
-                <td>'.$visitHistory[0][2].'</td>
-                <td>'.$visitHistory[0][3].'</td>
-            </tr>
-            <tr>
-                <td>'.$visitHistory[1][0].'</td>
-                <td>'.$visitHistory[1][1].'</td>
-                <td>'.$visitHistory[1][2].'</td>
-                <td>'.$visitHistory[1][3].'</td>
-            </tr>
-            <tr>
-                <td>'.$visitHistory[2][0].'</td>
-                <td>'.$visitHistory[2][1].'</td>
-                <td>'.$visitHistory[2][2].'</td>
-                <td>'.$visitHistory[2][3].'</td>
-            </tr>
+            <?php
+            foreach($visitHistory as $history)
+            echo"
+                <tr>
+                    <td>".$history['time']."</td>
+                    <td>".$history['visit']."</td>
+                    <td>".$history['impression']."</td>
+                    <td>".$history['device']."</td>
+                </tr>";
+            ?>
         </table>
     </div>
     </div>
 </body>
-</html>'
-?>
+</html>
