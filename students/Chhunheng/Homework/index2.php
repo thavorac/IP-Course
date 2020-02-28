@@ -2,18 +2,19 @@
     $visitor=90;
     $like=70;
     $dislike=10;
-    $visitorHistory= array (
+    $visitorHistories= array (
                          array("time"=>"Yesterday 3pm","visit_page"=>"Homepage",
                          "impression"=>"Good","visit_device"=>"Chrome"
-    ),
-                array("time"=>"Yesterday 5pm","visit_page"=>"Post1",
-                "impression"=>"Good","visit_device"=>"iPad"
-            ),
-            array("time"=>"Today 7pm","visit_page"=>"Post2",
-            "impression"=>"","visit_device"=>"Firefox"
-        ),
-    );
+                          ),
+                        array("time"=>"Yesterday 5pm","visit_page"=>"Post1",
+                          "impression"=>"Good","visit_device"=>"iPad"
+                        ),
+                        array("time"=>"Today 7pm","visit_page"=>"Post2",
+                          "impression"=>"","visit_device"=>"Firefox"
+                        ),
+                      );
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -139,86 +140,16 @@ a:visited {
             <th>Visting device</th>
 
         </tr>
-        <tr>
-            <td><?php 
-               echo $visitorHistory[0]['time'];
-            ?></td>
-            <td>
-            <?php 
-               echo $visitorHistory[0]['visit_page'];
-            ?>
-            </td>
-            <td>
-            <?php 
-               echo $visitorHistory[0]['impression'];
-            ?>
-            </td>
-            <td>
-            <?php 
-               echo $visitorHistory[0]['visit_device'];
-            ?>
-            </td>
-        </tr>
-        <tr>
-            <td><?php 
-               echo $visitorHistory[0]['time'];
-            ?></td>
-            <td>
-            <?php 
-               echo $visitorHistory[0]['visit_page'];
-            ?>
-            </td>
-            <td>
-            <?php 
-               echo $visitorHistory[0]['impression'];
-            ?>
-            </td>
-            <td>
-            <?php 
-               echo $visitorHistory[0]['visit_device'];
-            ?>
-            </td>
-        </tr>
-        <tr>
-            <td><?php 
-               echo $visitorHistory[1]['time'];
-            ?></td>
-            <td>
-            <?php 
-               echo $visitorHistory[1]['visit_page'];
-            ?>
-            </td>
-            <td>
-            <?php 
-               echo $visitorHistory[1]['impression'];
-            ?>
-            </td>
-            <td>
-            <?php 
-               echo $visitorHistory[1]['visit_device'];
-            ?>
-            </td>
-        </tr>
-        <tr>
-            <td><?php 
-               echo $visitorHistory[2]['time'];
-            ?></td>
-            <td>
-            <?php 
-               echo $visitorHistory[2]['visit_page'];
-            ?>
-            </td>
-            <td>
-            <?php 
-               echo $visitorHistory[2]['impression'];
-            ?>
-            </td>
-            <td>
-            <?php 
-               echo $visitorHistory[2]['visit_device'];
-            ?>
-            </td>
-        </tr>
+        <?php
+        foreach($visitorHistories as $visitorHistory)
+        echo "<tr>
+            <td>".$visitorHistory['time']."</td>
+            <td>".$visitorHistory['visit_page']."</td>
+            <td>".$visitorHistory['impression']."</td>
+            <td>".$visitorHistory['visit_device']."</td>
+        </tr>";
+        ?>
+      
     </table>
     
 
