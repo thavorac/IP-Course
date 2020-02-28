@@ -39,15 +39,15 @@ echo'
     <div>
         <div style="border: 1px solid black; width: 150px; display: inline-block; text-align: center;margin: 20px;">
             <i class="fa fa-users" style="margin-top: 12px; color:cornflowerblue;"></i><br>
-            <p>'.$visitor.'</p>
+            <p>'.$visitor.' visited</p>
         </div>
         <div style="border: 1px solid black; width: 150px;display: inline-block; text-align: center;margin: 20px;">
                 <i class="fa fa-thumbs-up"  style="margin-top: 12px;color:cornflowerblue;"></i><br>
-                <p>'.$like.'</p>
+                <p>'.$like.' liked</p>
         </div>
         <div style="border: 1px solid black; width: 150px;display: inline-block;  text-align: center;margin: 20px;">
             <i class="fa fa-thumbs-down"  style="margin-top: 12px;color:cornflowerblue;"></i><br>
-            <p>'.$dislike.'</p>
+            <p>'.$dislike.' disliked</p>
         </div>
     </div>
     <div style="margin-left:20px; margin-bottom: 20px;">
