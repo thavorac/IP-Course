@@ -30,25 +30,25 @@ img {
             <button type="submit" id="btn"> create New Post </button>
             <h3><a href="">Drafting Posts</a></h3>
             <div class="post">
-            <img src="../learnphp/blank-profile.png" alt="pic"> 
+            <img src="../Homework1/blank-profile.png" alt="pic"> 
             <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto velit ad dolor consequatur cupiditate esse, earum quidem vero temporibus voluptatum!
             <p class="time"> Saved 3hours ago</p> 
             </div>
 
             <div class="post">
-            <img src="../learnphp/blank-profile.png" alt="pic"> 
+            <img src="../Homework1/blank-profile.png" alt="pic"> 
             <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto velit ad dolor consequatur cupiditate esse, earum quidem vero temporibus voluptatum!
             <p class="time"> Saved yesterday 9pm</p>
             </div>
             <h3><a href="">Published Posts</a></h3>
             <div class="post">
-            <img src="../learnphp/blank-profile.png" alt="pic"> 
+            <img src="../Homework1/blank-profile.png" alt="pic"> 
             <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto velit ad dolor consequatur cupiditate esse, earum quidem vero temporibus voluptatum!
             <p class="time"> Published 3hours ago</p>
             </div>
 
             <div class="post">
-            <img src="../learnphp/blank-profile.png" alt="pic"> 
+            <img src="../Homework1/blank-profile.png" alt="pic"> 
             <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto velit ad dolor consequatur cupiditate esse, earum quidem vero temporibus voluptatum!
             <p class="time"> Published yesterday 9pm</p>
             </div>

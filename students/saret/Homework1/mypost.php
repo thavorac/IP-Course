@@ -49,6 +49,17 @@ li{
 }
 </style>
 <?php
+    $visitor = 90;
+    $like = 70;
+    $dislike = 10;
+    $visitorHistories = array (
+        array("time"=>"Yesterday 3pm","visit_page"=>"Homepage","impression"=>"good","visit_device"=>"Chrome"),
+        array("time"=>"Yesterday 5pm","visit_page"=>"Post 1","impression"=>"good","visit_device"=>"iPad"),
+        array("time"=>"Yesterday 7pm","visit_page"=>"Post 2","impression"=>"","visit_device"=>"Firefox"),
+    )
+    ?>
+<?php
+    
     echo '
         <!DOCTYPE html>
 <html>
@@ -70,54 +81,53 @@ li{
             <ul>
                 <li>
                     <i class="fa fa-users"></i><br>
-                    390 Visitors
-                
-                </li>
+        ';
+           
+               echo  "$visitor Visitors";
+            
+              
+              echo'  </li>
                 <li>
                     <i class="fa fa-thumbs-up"></i><br>
-                    28 Likes
+                    ';
                     
-                </li>
+                  echo "$like Likes";
+                
+                    
+               
+               echo' </li>
                 <li>
                     <i class="fa fa-thumbs-down"></i> <br>
-                    12 Dislike
+                    ';
+                
+                   echo "$dislike Dislikes";
+                
 
-                </li>
+             echo"   </li>
             </ul>
 
             <br>
             <br>
 
-            <p> Visitor\'s history </p>
+            <p> Visitor's history </p> ";
+            foreach($visitorHistories as $visitorHistory)
+            echo " <table>
+            <tr>
+                <th>Time</th>
+                <th>Visiting page</th>
+                <th>Impression</th>
+                <th>Visiting Device</th>
+            </tr>
+            <tr>
             
-            <table cellspacing="0" width="100%">
-                <tr id="row1">
-                <td>Time</td>
-                <td>Visiting page</td>
-                <td>Impression</td>
-                <td>Visiting device</td>
-                </tr>
-                <tr id="row2">
-                <td>Yesterday 3pm</td>
-                <td>Homepage</td>
-                <td>good</td>
-                <td>Chrome</td>
-                </tr>
-                <tr id="row3">
-                <td>Yesterday 5pm</td>
-                <td>Post 1</td>
-                <td>good</td>
-                <td>iPad</td>
-                </tr>
-                <tr id="row4">
-                <td>Today 7am</td>
-                <td>Post 2</td>
-                <td></td>
-                <td>Firefox</td>
-                </tr>
-            </table>
-    </div>
+                <td>".$visitorHistory['time']." </td>
+                <td>".$visitorHistory['visit_page']." </td>
+                <td>".$visitorHistory['impression']."</td>
+                <td>".$visitorHistory['visit_device']."</td>
+            </tr>
+                    </table>";
+   echo " </div>
   </body>
-  </html> 
-    ';
+  </html> ";
+
 ?>
