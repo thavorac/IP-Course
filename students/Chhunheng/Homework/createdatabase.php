@@ -2,27 +2,27 @@
 $servername="localhost";
 $username="root";
 $password="";
-
+$dbname="blogs";
 
 
 //Create connection
  $conn = new mysqli($servername, $username, $password);
 //check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    echo("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully"."<br>";
-//$sql="drop database blogs";
+// $sql="drop database blogs";
 //Create database
- $sql= "CREATE DATABASE  blogs";
+$sql= "CREATE DATABASE  blogs";
 
  if($conn->query($sql)===TRUE){
-     die ("Database created successfully<br>");
+     echo ("Database created successfully<br>");
  }
 else{
  echo "Error Creating database:".$conn->error;
  }
- $conn = new mysqli($servername, $username, $password,"blogs");
+ $conn = new mysqli($servername, $username, $password,$dbname);
  //create table
 $sql="CREATE TABLE  visitorHistories(
     time timestamp default current_timestamp on update current_timestamp,
@@ -32,7 +32,7 @@ $sql="CREATE TABLE  visitorHistories(
 )";
 //check create table
 if($conn->query($sql)===TRUE){
-    die ("Table visitorHistories created successfully");
+    echo ("Table visitorHistories created successfully");
 }
 else {
     echo "Error creating table:". $conn->error;
