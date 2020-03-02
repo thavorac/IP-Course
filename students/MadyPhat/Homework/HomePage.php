@@ -12,42 +12,62 @@
             }
             div{
             border: 1px solid black;
-            padding: 5px;
+            padding: 10px;
+            }
+
+            .Impression{
+                border: none;
+            }
+
+            h3{
+                display: inline-block;
+            }
+
+            form{
+                margin-top: 20px;
+                float: right;
             }
             ul {
                 list-style-type: none;
             }
             ul li{
                 float: left;
-                margin: 70px;
+                margin: 30px;
+                padding: 30px;
             }
         </style>
     </head>
     <body>
         <a href="url">Home</a>
         <h1>Welcome to my blog!</h1>
-        <h3>Total Impression</h3>
-        <select name="Option" id="Option">
-            <option value="This month">This Month</option>
-            <option value="Last month">Last Month</option>
-        </select>
+        
+        <div class="Impression">
+            <h3>Total Impression</h3>
+            <form>
+                <select name="Option" id="Option">
+                    <option value="This month">This Month</option>
+                    <option value="Last month">Last Month</option>
+                </select>
+            </form>
+        </div>
+
         <ul>
             <li>
                 <div>
-                    <img src="visitor.png" alt="vistitor" width="80px" height="80px"><br>
-                    390 Visitors
+                    <img src="visitor.png" alt="vistitor" width="40px" height="40px"><br>
+                    <?php  echo "200 vistior"  ?>
                 </div>
             </li>
             <li>
                 <div>
-                    <img src="like.png" alt="vistitor" width="80px" height="80px"><br>
-                    28 Likes
+                    <img src="like.png" alt="vistitor" width="40px" height="40px"><br>
+                    <?php echo "200 Likes" ?>
                 </div>
             </li>
             <li>
                 <div>
-                    <img src="dislike.png" alt="vistitor" width="80px" height="80px"><br>
-                    12 Dislike
+                    <img src="dislike.png" alt="vistitor" width="40px" height="40px"><br>
+                    <?php echo "2 Dislikes" ?>
                 </div>
             </li>
         </ul>
