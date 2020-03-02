@@ -1,3 +1,7 @@
+<?php
+require 'insertdata.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

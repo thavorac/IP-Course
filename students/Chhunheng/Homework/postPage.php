@@ -1,18 +1,26 @@
-<?php 
+<?php require 'insertdata.php';
     $visitor=90;
     $like=70;
     $dislike=10;
-    $visitorHistories= array (
-                         array("time"=>"Yesterday 3pm","visit_page"=>"Homepage",
-                         "impression"=>"Good","visit_device"=>"Chrome"
-                          ),
-                        array("time"=>"Yesterday 5pm","visit_page"=>"Post1",
-                          "impression"=>"Good","visit_device"=>"iPad"
-                        ),
-                        array("time"=>"Today 7pm","visit_page"=>"Post2",
-                          "impression"=>"","visit_device"=>"Firefox"
-                        ),
-                      );
+    $servername="localhost";
+    $username="root";
+    $password="";
+    $dbname="blogs";
+     $conn=new mysqli($servername, $username, $password,$dbname);
+    if($conn->connect_error){
+        die ("Connection failed: ".$conn->connect_error);
+    }
+   
+    $sql="select * from visitorhistories"; 
+    $result = $conn->query($sql);
+    
+
+   
+
+    $conn->close();
+
+    
+   
 ?>
 
 <!DOCTYPE html>
@@ -144,13 +152,24 @@ a:visited {
 
         </tr>
         <?php
-        foreach($visitorHistories as $visitorHistory)
-        echo "<tr>
-            <td>".$visitorHistory['time']."</td>
-            <td>".$visitorHistory['visit_page']."</td>
-            <td>".$visitorHistory['impression']."</td>
-            <td>".$visitorHistory['visit_device']."</td>
-        </tr>";
+             
+            if($result->num_rows>0){//num_rows for count row in table db.
+                while($row = $result->fetch_assoc()) //transform to associative array
+                {
+                    echo " 
+                    <tr>
+                        <td>".$row['time']."</td>
+                        <td>".$row['visiting_page']."</td>
+                        <td>".$row['impression']."</td>
+                        <td>".$row['visiting_device']."</td>
+                    </tr>
+                    ";
+                }
+                
+            }
+            else {
+                echo "0 result";
+            }
         ?>
       
     </table>
