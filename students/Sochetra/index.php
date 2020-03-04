@@ -9,17 +9,17 @@
       rel="stylesheet">
 </head>
 <body>
+<?php 
+    $page = "Home Page";
+    include_once "count.php";
+
+?>
     <?php 
 
-        $visitor = 100;
+        $visitor = $conn->query("SELECT count(*) as total FROM visitors ");
         $like = 20;
         $dislike = 30;
-        $history = array(
-            array("Yesterday 3pm", "Homepage", "good", "Chrome"),
-            array("Yesterday 5pm", "Post 1", "good", "Ipod"),
-            array("Today 7pm", "Post 2", "", "Firefox")
-
-        );
+        $history = $conn->query("SELECT * FROM visitors");
     ?>
 
     <table>  
@@ -46,7 +46,7 @@
         <tr>
             <td>
                 <i class="material-icons" style="font-size: 50px">supervisor_account</i><br>
-                <?php echo $visitor; ?> Visitors
+                <?php echo mysqli_fetch_assoc($visitor)['total']; ?> Visitors
             </td>
             <td class="no-border"></td>
             <td>
@@ -70,13 +70,13 @@
             <td class="history">Impression</td>
             <td class="history">Visiting Device</td>
         </tr>
-        <?php foreach($history as $row) { ?>
+        <?php while($row = mysqli_fetch_assoc($history)) { ?>
 
             <tr class="history">
-                <td class="history"><?php echo $row[0]; ?></td>
-                <td class="history"><?php echo $row[1]; ?></td>
-                <td class="history"><?php echo $row[2]; ?></td>
-                <td class="history"><?php echo $row[3]; ?></td>
+                <td class="history"><?php echo $row['time']; ?></td>
+                <td class="history"><?php echo $row['page']; ?></td>
+                <td class="history"><?php echo $row['impressionn']; ?></td>
+                <td class="history"><?php echo $row['device']; ?></td>
             </tr>
             
         <?php } ?>
