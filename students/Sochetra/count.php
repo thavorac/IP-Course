@@ -15,8 +15,8 @@ if ($conn->connect_error) {
 $device = $_SERVER['HTTP_USER_AGENT'];
 $date = new DateTime();
 $time = $date->getTimestamp();
-
-$sql = "INSERT INTO visitors (time, device, page, impressionn) VALUES('$time', '$device', '$page', 'good')";
+$ip = $_SERVER['REMOTE_ADDR'];
+$sql = "INSERT INTO visitors (time, device, page, impressionn, ip) VALUES('$time', '$device', '$page', 'good', '$ip')";
 $conn->query($sql);
 
 ?>
