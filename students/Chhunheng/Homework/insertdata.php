@@ -21,7 +21,7 @@
 
     if($conn->query($sql)===TRUE){
         echo '<script type="text/javascript">';
-        echo ' alert("success Recorded")';  //not showing an alert box.
+        echo ' console.log("success Recorded")';  //not showing an alert box.
         echo '</script>';
     }
     else{
