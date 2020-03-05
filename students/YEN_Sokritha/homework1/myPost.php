@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+$_SESSION['page_visited'] = basename('My Post');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

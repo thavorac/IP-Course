@@ -1,12 +1,26 @@
-<?php
+<?php require 'insertData.php';
+// Impression variable
 $visitor = 220;
 $like = 110;
 $dislike = 10;
-$history_visitors = array(
-    array("Time" => "Yesterday 3 am", "Visiting_page" => "Homepage", "Impression" => "good", "visiting_device" => "Chrome"),
-    array("Time" => "Yesterday 5 am", "Visiting_page" => "Post 1", "Impression" => "good", "visiting_device" => "iPad"),
-    array("Time" => "Today 7 am", "Visiting_page" => "Post 2", "Impression" => "", "visiting_device" => "Firefox"),
-)
+
+// Retrived Data
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "blogs";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM visitor_histories";
+// $sql = "SELECT * FROM visitor_histories LIMIT 10 offset 20";
+$result = $conn->query($sql);
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +42,7 @@ $history_visitors = array(
         <div class="row">
             <ul class="navbar">
                 <li style="font-size: 1.2em; font-weight:600;">Home</li>
-                <li><a href="./myPost.php">My Posts</a></li>
+                <li><a href="./myPost.php?">My Posts</a></li>
             </ul>
         </div>
         <h1>Welcome to my blog!</h1>
@@ -69,15 +83,19 @@ $history_visitors = array(
                     <th>visiting device</th>
                 </tr>
                 <?php
-                foreach ($history_visitors as $history_visitor)
-                    # code...
-                    echo "<tr>
-                              <td>" . $history_visitor['Time'] . "</td>
-                              <td>" . $history_visitor['Visiting_page'] . "</td>
-                              <td>" . $history_visitor['Impression'] . "</td>
-                              <td>" . $history_visitor['visiting_device'] . "</td>
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>
+                              <td>" . $row['time_visiting'] . "</td>
+                              <td>" . $row['visitor_page'] . "</td>
+                              <td>" . $row['impression'] . "</td>
+                              <td>" . $row['visit_device'] . "</td>
                           </tr>";
-
+                    }
+                } else {
+                    echo "0 results";
+                }
                 ?>
             </table>
         </div>
