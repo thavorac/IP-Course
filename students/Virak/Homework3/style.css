@@ -43,7 +43,6 @@ button{
     background-color: blue;
     color: white;
     font-size: 20px;
-    float: right;
 }
 p{
     font-size: 20px;
@@ -51,7 +50,7 @@ p{
     
 }
 .post{
-    border: 1px solid rgb(123, 255, 152);
+    /* border: 1px solid rgb(123, 255, 152); */
     padding: 10px;
     margin-top: 20px;
     min-height: 95px;
@@ -63,6 +62,24 @@ p{
 }
 a{
     text-decoration: none;
-    /* color: white;
-    background-color: blue; */
+    
 }
+
+#avatar{
+    margin-left: 15px;
+    width: 70px;
+    height: 70px;
+}
+#img{
+    width:30px;
+    border:none;
+    height:30px;
+    margin-left:-20px;
+    margin-bottom:91px
+}
+.abcd img{
+    height:100px;
+    width:100px;
+    padding:5px;
+    border:1px solid #e8debd
+    }
