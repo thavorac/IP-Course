@@ -7,6 +7,7 @@
     }
 table  {
     border: 2px solid gray;
+    width: 100%;
     
      
 }
@@ -49,6 +50,10 @@ li{
 }
 </style>
 <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "my_blog";
     $visitor = 90;
     $like = 70;
     $dislike = 10;
@@ -59,7 +64,34 @@ li{
     )
     ?>
 <?php
-    
+// create connection
+    $cann = mysqli_connect($servername,$username,$password,$dbname);
+//check connection
+        if(!$cann) {
+            die ("connection fail: ".mysqli_connect_error());
+        }
+//check date and get the date
+        $date = new DateTime("now", new DateTimeZone('Asia/Phnom_Penh') );
+
+    $query = "INSERT INTO activity_histories (time,visitor_page,visit_device) VALUES('".$date->format('Y-m-d H:i:s')."','post 1','".$_SERVER['HTTP_USER_AGENT']."')";
+    if (mysqli_query($cann,$query)){
+    echo"Success";
+    }
+    else {
+        echo "Error: ".mysqli_error($cann);
+    }
+    mysqli_close($cann);
+
+    $cann = mysqli_connect($servername,$username,$password,$dbname);
+
+        $query = "select * from activity_histories ";
+        $result = mysqli_query($cann, $query);
+        $data = mysqli_fetch_all($result,MYSQLI_ASSOC);
+        // for display data
+     //  var_dump ($data);
+
+    mysqli_close($cann);
+
     echo '
         <!DOCTYPE html>
 <html>
@@ -110,7 +142,7 @@ li{
             <br>
 
             <p> Visitor's history </p> ";
-            foreach($visitorHistories as $visitorHistory)
+            foreach($data as $visitorHistory)
             echo " <table>
             <tr>
                 <th>Time</th>
@@ -121,8 +153,8 @@ li{
             <tr>
             
                 <td>".$visitorHistory['time']." </td>
-                <td>".$visitorHistory['visit_page']." </td>
-                <td>".$visitorHistory['impression']."</td>
+                <td>".$visitorHistory['visitor_page']." </td>
+                <td>".$visitorHistory['Impression']."</td>
                 <td>".$visitorHistory['visit_device']."</td>
             </tr>
                     </table>";
