@@ -24,7 +24,7 @@ $(document).ready(function () {
             reader.readAsDataURL(this.files[0]);
             $(this).hide();
             $("#abcd" + abc).append($("<img/>", {
-                id: 'img',
+                id: 'imgdelete',
                 src: 'images/DeleteRed.png',
                 alt: 'delete'
             }).click(function () {
@@ -36,11 +36,13 @@ $(document).ready(function () {
     // To Preview Image
     function imageIsLoaded(e) {
         $('#previewimg' + abc).attr('src', e.target.result);
+        $('#previewimg_' + abc_).attr('src', e.target.result);
         
     };
     $('#upload').click(function (e) {
         var name = $(":file").val();
-        if (!name) {
+        var name_ = $(":img").val();
+        if (!name && !name_) {
             alert("First Image Must Be Selected");
             e.preventDefault();
         }

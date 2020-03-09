@@ -35,12 +35,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
 </head>
 <body>
     <div class="container">
 
-        <h3 class="widget-heading">Home|<a href="mypost.php"> My Post</a></h3>
+    <br><br>
+        <h3 class="widget-heading">Home | <a href="mypost.php"> My Post</a></h3>
         <h1>Welcome to my blog!</h1>
         Total Impression
         <select class="select">
@@ -65,7 +67,7 @@
                 <?php echo $visitor_impress[1] ?>
             </div>
             <div class="grid-item">
-                <i class="fa fa-cloud"></i> <br>
+                <img style="width:30px" src="images/thumbs-down-solid.svg" alt="" srcset=""> <br>
                 <?php echo $visitor_impress[2] ?>
             </div>
         </div>
@@ -73,7 +75,7 @@
         <br>
         <br>
         <?php $tb_visitor_histories = run_query("select * from visitor_histories"); ?>
-        <table>
+        <table cellspacing="0">
         <tr>
         <td>Time</td>
         <td>Visiting page</td>

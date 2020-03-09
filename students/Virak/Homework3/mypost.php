@@ -30,9 +30,10 @@
     
 </head>
 <body>
+    
     <div class="container">
-
-    <h3><a href="home.php">Home</a> | My Post</h3>
+    <br><br>
+    <h3><a href="index.php">Home</a> | My Post</h3>
 
         <b>Drafting Posts </b>
         <button class="btn btn-success float-right">
