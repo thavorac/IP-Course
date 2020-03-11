@@ -1,0 +1,15 @@
+a{
+    font-size:20px;
+}
+    body{
+     margin-left: 5%;
+     margin-right: 5%;
+ }
+
+a:active {
+     color: red;
+ background-color: yellow;
+ }
+ a:visited {
+     color: green;
+ }

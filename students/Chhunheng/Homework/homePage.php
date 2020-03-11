@@ -81,7 +81,7 @@ require 'insertdata.php';
    <br><br>
     <div class="post">
     
-        <button>Create New Post</button>
+        <a href="create_post.php"><button>Create New Post</button></a>
         <h3><ins><b>Drafting Posts</b></ins>
     </h3>
 </div>
