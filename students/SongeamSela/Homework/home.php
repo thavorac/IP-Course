@@ -1,3 +1,40 @@
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "123";
+    $dbname = "dbPHP";
+    $port = "8888";
+
+    //create connection
+    $conn = mysqli_connect($servername,$username,$password,$dbname, $port);
+    //check connection
+    if(!$conn){
+        die("Connection failed: ").mysqli_connect_error();
+    }
+
+
+    $now = date("Y-m-d H:i:s");
+    //create database
+    $query = "INSERT INTO activity_histories (time,visitor_page,device) VALUE ('".$now."','home','".$_SERVER['HTTP_USER_AGENT']."')";
+    
+    
+
+
+    if(mysqli_query($conn,$query)){
+        echo"success";
+    }else{
+        echo"Error: ", mysqli_error($conn);
+    }
+
+    // if ($conn->query($sql) === TRUE) {
+    //     echo "New record created successfully";
+    // } else {
+    //     echo "Error: " . $sql . "<br>" . $conn->error;
+    // }
+    
+    $conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
