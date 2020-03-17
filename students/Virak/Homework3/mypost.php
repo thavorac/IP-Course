@@ -21,13 +21,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
+        a{
+            text-decoration:none;
+        }
     </style>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+
 </head>
 <body>
     
@@ -36,24 +38,26 @@
     <h3><a href="index.php">Home</a> | My Post</h3>
 
         <b>Drafting Posts </b>
-        <button class="btn btn-success float-right">
-            <a class="link" href="create_post.php">Create New Post</a>
-        </button>
+
+        <a class="btn btn-success float-right" href="create_post.php">Create New Post</a>
         
 
         <br>
-
+        <form action="detail.php" method="POST">
         <?php $tb_post = run_query("select * from post"); ?>
         <?php foreach($tb_post as $p): ?>
+
+            <a href="detail.php?id=<?php echo $p['id']; ?>">
             <div class="post">
                 <i class="fa fa-user" style="color: aqua; border: 2px solid gray;font-size: 90px; float: left; padding:0px 20px 0px;margin-right: 10px;"></i>
-                <b><?php echo $p['username']; ?></b><br>
-                    <?php echo $p['text']; ?>
+                <b> Post <?php echo $p['id']; ?></b><br>
+                    <?php echo $p['title']; ?>
                 <br>
                 <div class="time"> <?php echo $p['created_at']; ?></div>
             </div>
+            </a>
         <?php endforeach; ?>
-  
+        </form>
 
   
 

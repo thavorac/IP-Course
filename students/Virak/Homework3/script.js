@@ -36,7 +36,7 @@ $(document).ready(function () {
     // To Preview Image
     function imageIsLoaded(e) {
         $('#previewimg' + abc).attr('src', e.target.result);
-        $('#previewimg_' + abc_).attr('src', e.target.result);
+    
         
     };
     $('#upload').click(function (e) {

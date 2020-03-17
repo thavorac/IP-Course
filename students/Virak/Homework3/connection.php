@@ -1,6 +1,6 @@
 <?php
     // $con = new mysqli($sername, $username, $password);
-    // $query = "insert into visitor_histories ()";
+    // $query = "insert into post ()";
     // $con->query($query);
     // $con->close();
 ?>
