@@ -18,6 +18,9 @@ require 'insertdata.php';
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- css -->
+<link rel="stylesheet" href="css/header.css">
+  
    <style>
    a{
        font-size:20px;

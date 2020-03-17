@@ -1,5 +1,11 @@
-container=document.getElementsByClassName('container');
-container.forEach(image => {
+document.getElementById('upload_image').addEventListener('click' ,uploadImage);
 
-    document.write(image);
-});
+function uploadImage(){
+    document.getElementById('fileToUpload').click();
+}
+document.getElementById('upload_image1').addEventListener(
+    'click',uploadImage1
+);
+function uploadImage1(){
+    document.getElementById('fileToUpload1').click();
+}

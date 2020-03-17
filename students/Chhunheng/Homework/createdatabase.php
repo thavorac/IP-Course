@@ -24,7 +24,7 @@ else{
  echo "Error Creating database:".$conn->error;
  }
  $conn = new mysqli($servername, $username, $password,$dbname);
- //create table
+ //create table 
 $sql="CREATE TABLE  visitorHistories(
     time timestamp default current_timestamp on update current_timestamp,
     visiting_page varchar(255) not null,

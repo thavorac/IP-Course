@@ -31,6 +31,7 @@
    <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
+
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -39,56 +40,9 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    
-<style>
-    a{
-        font-size:20px;
-    }
-    #Month{
-        
-        float: right;
-        width: 10%;
-        height: 25px;
-        display: inline;
-    }
-    body{
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    table{
-        border-collapse: collapse;
-        text-align: center;
-    }
-    table, th, td {
-  border: 1px solid black;
-}
-
-table {
-  width: 100%;
-}
-#htable{
-    background-color: aqua;
-}
-th {
-  height: 30px;
-  color: white;
-}
-.col-sm-3{
-    
-     border: 2px solid #000000;
-     margin: 0 auto ;
-    text-align: center;
-    
-}
-
-a:active {
-    color: red;
-  background-color: yellow;
-}
-a:visited {
-            color: green;
-        }
-</style>
+ <!-- css    -->
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css\postPage.css">
 <title>My Poste</title>
 
 </head>

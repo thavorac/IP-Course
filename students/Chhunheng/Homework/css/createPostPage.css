@@ -8,7 +8,7 @@ form{
     background-color: #ccc;
 }
 input,textarea{
-    width: 100%;
+    width: 70%;
 }
 
 label{
@@ -17,7 +17,7 @@ label{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     float : left;
     font-size: 16px;
-    /* width: 40%; */
+     width: 30%; 
 }
 #save, #saveAndPost{
     color:white;
@@ -41,15 +41,16 @@ button{
     float: right;
 }
 
-
 #upload_image{
-    float: right;
+    position :relative; 
+    z-index: 99;     
     margin-top: 45px;
-    margin-right: 15%;
-    
     height: 25px;
     background-color: aqua;
+    float: right;
+   
 }
+
 #upload_image1{
     float: left;
     height: 25px;
@@ -59,14 +60,18 @@ button{
     position: relative;
 
 }
+.container img{
+    width:100px;
+    height: 100px;
+}
 .container button{
 
     position: absolute;
     left: 0;
     bottom:0;
     
-     width:100px;  /*width img=100px */
-     height: 25px;
+    width:100px;  /*width img=100px */
+    height: 25px;
     background-color: rgb(246, 37, 65);
     opacity:0.6;
 }
@@ -79,21 +84,23 @@ button{
 
 }
 .container1 img{
-    width: 85%;
+    width: 70%;
+    height: 150px;
 }
 .container1 button{
-    width:85%;  /*width img=100px */
+    width:70%;  /*width img=100px */
     height: 25px;
     position: absolute;
     left: 0;
-    bottom:0;
-    
+    bottom:0;    
     background-color: rgb(246, 37, 65);
     opacity:0.6;
 }
 .container1 button :hover{
     opacity: 1;
+    background-color: red;
     
 }
+
 
 
